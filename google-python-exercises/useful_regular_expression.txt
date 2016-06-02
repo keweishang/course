@@ -1,0 +1,9 @@
+. any char
+\w word char
+\d digit
+\s whitespace \S non-whitespace
++ 1 or more
+* 0 or more
+[] one char in the set. [\w.] means 'one word char or a literal "."'
+[.] one literal "." char. Any special char in [] has its literal meaning
+() capture the content; good thing is it doesn't change whats regex is going to match, so you can ignore it

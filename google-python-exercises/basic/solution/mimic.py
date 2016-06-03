@@ -43,6 +43,7 @@ columns, so the output looks better.
 
 import random
 import sys
+import itertools
 
 
 def mimic_dict(filename):

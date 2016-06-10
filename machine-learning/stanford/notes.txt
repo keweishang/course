@@ -10,3 +10,25 @@ function [J grad] = nnCostFunction(unrolled_thetas, ...
                                    num_labels, ...
                                    X, y, lambda)
 Given a concrete initial theta (unrolled) vector, concrete X and y training data, calculate the concrete value of J (a.k.a. cost), and concrete value of gradients (a.k.a. partial derivative) for every theta. We may also calculate Regularized cost to avoid overfitting of training data, by applying lambda.
+
+Questions:
+1. What exactly does δ (delta) represents? I don't quite get the following definition:
+For each node j in layer l, we would like to compute
+an “error term” δ(l)_j that measures how much that node was “responsible” j for any errors in our output.
+
+2. Understanding of the following formula to calculate δ from n layer to n-1 layer?
+δ(2) =  Θ(2)T*δ(3) .∗ g'(z(2))
+δ(2) : delta vector of the second layer (the hidden layer).
+Θ(2)T : transposed theta matrice of the second layer.
+δ(3) : delta vector of the third layer (the output layer).
+.* : element wise vector product.
+g'(z(2)): g'() is the derivative sigmoid function; z(2) the z vector of second layer; z is Θ0*1 + Θ1*x1 + Θ2*x2 + ... + Θn*xn from the first layer.
+I understand we should get calculate δ(2) from δ(3), but how to explain this formula intuitively? Why do we use g'() here?
+
+3. Understanding of the following formular to calculate the gradients (a.k.a. partial derivatives)?
+∆(l) = ∆(l) + δ(l+1)*(a(l))T
+l : the l layer of the neural network
+∆(l) : upper delta, means the matrice of gradients at the l layer
+δ(l+1) : delta vector at l + 1 layer
+(a(l))T : a's (including the bias 1 in front) at the l layer, then transpose the vector
+Why δ(l+1)*(a(l))T is the gradient (aka partial derivative) matrice at l layer?

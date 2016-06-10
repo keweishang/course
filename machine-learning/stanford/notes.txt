@@ -1,5 +1,6 @@
 Week 5:
 
+=== Note ===
 There are more optimized functions than Gradient Descent (such as fminunc in Matlab) that takes a Cost Function and initial thetas, and calculates the result thetas that minimize the cost - get the minimized value of cost function.
 
 
@@ -11,7 +12,7 @@ function [J grad] = nnCostFunction(unrolled_thetas, ...
                                    X, y, lambda)
 Given a concrete initial theta (unrolled) vector, concrete X and y training data, calculate the concrete value of J (a.k.a. cost), and concrete value of gradients (a.k.a. partial derivative) for every theta. We may also calculate Regularized cost to avoid overfitting of training data, by applying lambda.
 
-Questions:
+=== Question ===
 1. What exactly does δ (delta) represents? I don't quite get the following definition:
 For each node j in layer l, we would like to compute
 an “error term” δ(l)_j that measures how much that node was “responsible” j for any errors in our output.

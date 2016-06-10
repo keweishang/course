@@ -24,7 +24,7 @@ an “error term” δ(l)_j that measures how much that node was “responsible�
 δ(3) : delta vector of the third layer (the output layer).
 .* : element wise vector product.
 g'(z(2)): g'() is the derivative sigmoid function; z(2) the z vector of second layer; z is Θ0*1 + Θ1*x1 + Θ2*x2 + ... + Θn*xn from the first layer.
-I understand we should get calculate δ(2) from δ(3), but how to explain this formula intuitively? Why do we use g'() here?
+- I understand we should get δ(2) from δ(3), but how to explain this formula intuitively? Why do we use the derivative sigmoid function g'() here?
 
 3. Understanding of the following formular to calculate the gradients (a.k.a. partial derivatives)?
 ∆(l) = ∆(l) + δ(l+1)*(a(l))T
@@ -32,4 +32,4 @@ l : the l layer of the neural network
 ∆(l) : upper delta, means the matrice of gradients at the l layer
 δ(l+1) : delta vector at l + 1 layer
 (a(l))T : a's (including the bias 1 in front) at the l layer, then transpose the vector
-Why δ(l+1)*(a(l))T is the gradient (aka partial derivative) matrice at l layer?
+- Why δ(l+1)*(a(l))T is the gradient (aka partial derivative) matrice at l layer?

@@ -1,0 +1,14 @@
+SVM Kernal (Gaussian Kernal)
+Given an x vector, a training example, apply a similarity function to the x vector and get a new feature.
+For example, if instead of using x vector as feature, we want to use 3 new features f1, f2, f3. We can do the following steps:
+	* Choose three landmarks l1, l2, l3. That is three vectors.
+	* Apply similarity function, such as Gaussian Kernel, to x vector and each of landmark vectors.
+	* If x and l1 are geometrically close, then we get a f1 value close to 1. If they are far away, we get a f1 value close to 0.
+	* Apply samething to l2, and l3 too. Then we get three values of new features f1, f2, f3.
+	* If we predict "1" when θ0 + θ1*f1 + θ2*f2 + θ3*f3 ≥ 0, and θ0 = -0.5, θ1 = 1, θ2 = 1, θ3 = 0, the when a training example x is close to l1 or l2, the prediction is "1". 
+
+What do the θs (thetas) represent?
+The θs are the final learned parameters.
+
+How many landmarks are there?
+There will be are as many landmarks as training examples m.
